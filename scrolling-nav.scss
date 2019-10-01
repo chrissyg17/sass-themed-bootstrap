@@ -4,8 +4,9 @@
 // Variable Overrides 
 // COLORS
 $theme-colors: (
-  "primary": #d95700,
-  "tacotuesday": #900
+  "primary": #068A95,
+  
+  
 );
 // other theme-colors variables are: primary, secondary, success, info, warning, danger, light, dark
 
@@ -15,6 +16,28 @@ $link-color: blue;
 $link-decoration: none;
 $link-hover-color: gray;
 $link-hover-decoration: underline;
+$light-teal: #BED8D1;
+$navy: #2B374C;
+$teal: #068A95;
+$white_text: #FFF;
+
+//heading sizes
+$heading_one: 50px;
+$heading_two: $heading_one - 15px;
+$heading_three: $heading_one - 25px;
+
+h1 {
+    font-size: $heading_one;
+}
+
+h2 {
+    font-size: $heading_two;
+}
+
+h3 {
+    font-size: $heading_three;
+}
+
 
 // GRID VARIABLES
 // Grid columns
@@ -27,7 +50,7 @@ $grid-gutter-width: 30px;
 
 // FONTS
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: avenir !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-size-base: 1.1rem;
 
@@ -38,12 +61,14 @@ header {
 
 @media (min-width: 992px) {
   header {
-    padding: 156px 0 100px;
+    padding: 175px 0 100px;
   }
 }
 
 section {
-  padding: 150px 0;
+  padding: 100px 0;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 
@@ -53,4 +78,34 @@ section {
 // ///////////////////////////////////////////////////////
 // Bootstrap Sass Imports
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+nav{
+   background-color: $light-teal;
+}
+
+ul.navbar-nav li.nav-item a.nav-link { color: $navy; }
+
+footer{
+  padding: 50px 0;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.btn {
+    background-color: $teal;
+    border-color: $teal;
+    font-size: 15px;
+    color: $white_text;
+}
+
+.btn a:hover{
+    background-color: $teal;
+    border-color: $teal;
+    color: $white_text;
+    text-decoration: underline;
+}
+
+a {
+    color: $white_text;
+}
 
